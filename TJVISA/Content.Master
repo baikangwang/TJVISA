@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Content.master.cs" Inherits="TJVISA.Content" EnableTheming="True" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <style type="text/css">
+        
+        .RadSplitter, .RadSplitter .rspSlideZone, .RadSplitter .rspSlideContainer, .RadSplitter .rspPaneTabContainer, .RadSplitter .rspPane, .RadSplitter .rspResizeBar, .RadSplitter .rspSlideContainerResize, .RadSplitter .rspPaneHorizontal, .RadSplitter .rspResizeBar
+        {
+            border: none !important;
+        }
+        
+        .RadWindow .rwDialogText  {
+            font-family: "Microsoft YaHei" !important;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"/>
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server"/>
+        <telerik:RadWindowManager ID="RadWindowManager1" runat="server"/>
+    <div id="content">
+        <asp:ContentPlaceHolder ID="mainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- end #content -->
+    <div id="sidebar">
+        <asp:ContentPlaceHolder ID="sidebarContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- end #sidebar -->
+    <script type="text/javascript">
+        Sys.Application.add_load(function() {
+            var topWin;
+            //do {
+            //parentWindow = window.top;
+            //} while (parentWindow == window.parent);
+            topWin = window.top;
+            var parentWin = window.parent;
+
+            var height = document.body.scrollHeight;
+            var splitter;
+            var minHeight;
+
+            if (topWin.GetRadSplitter) {
+                splitter = topWin.GetRadSplitter();
+                minHeight = splitter.getPanes()[0].get_minHeight();
+                if (height > minHeight)
+                    splitter.set_height(height + 40); //add additional 2px to the height of the splitter due to its border
+                else
+                    splitter.set_height(minHeight + 2);
+            }
+
+            if (parentWin != topWin && parentWin.GetRadSplitter) {
+                splitter = parentWin.GetRadSplitter();
+                minHeight = splitter.getPanes()[1].get_minHeight();
+                if (height > minHeight)
+                    splitter.set_height(height + 40); //add additional 2px to the height of the splitter due to its border
+                else
+                    splitter.set_height(minHeight + 2);
+            }
+        });
+    </script>
+
+    </form>
+</body>
+</html>

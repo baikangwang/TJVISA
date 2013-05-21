@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Content.Master" AutoEventWireup="true" CodeBehind="List.master.cs" Inherits="TJVISA.List" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+         #content {
+             width: 100%;
+         }
+         .RadGrid td, .RadGrid th {
+            font-family: "Microsoft YaHei" !important;
+             font-size: 14px;
+         }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mainContent" runat="server">
+<asp:ContentPlaceHolder ID="ListContent" runat="server"/>
+    <telerik:RadAjaxManagerProxy ID="RadAjaxManagerProxy1" runat="server"/>
+</asp:Content>

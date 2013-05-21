@@ -1,0 +1,299 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5DAC022B-BD32-48EA-8AE6-537B5E12320D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TJVISA</RootNamespace>
+    <AssemblyName>TJVISA</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI, Version=2011.2.712.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Telerik\RadControls for ASP.NET AJAX Q2 2011\Bin35\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2011.2.712.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Telerik\RadControls for ASP.NET AJAX Q2 2011\Bin35\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDetails.aspx.cs">
+      <DependentUpon>ApplicationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationDetails.aspx.designer.cs">
+      <DependentUpon>ApplicationDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationModel.aspx.cs">
+      <DependentUpon>ApplicationModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicationModel.aspx.designer.cs">
+      <DependentUpon>ApplicationModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\AppCore.cs" />
+    <Compile Include="Base\AttributeControl.cs" />
+    <Compile Include="Base\GlobalConstant.cs" />
+    <Compile Include="Base\PageSetting.cs" />
+    <Compile Include="BLL\ApplicationBLL.cs" />
+    <Compile Include="BLL\CaseBLL.cs" />
+    <Compile Include="BLL\CollectionBLL.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\StatusBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="CaseDetails.aspx.cs">
+      <DependentUpon>CaseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CaseDetails.aspx.designer.cs">
+      <DependentUpon>CaseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionDetails.aspx.cs">
+      <DependentUpon>CollectionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionDetails.aspx.designer.cs">
+      <DependentUpon>CollectionDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactMe.aspx.cs">
+      <DependentUpon>ContactMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactMe.aspx.designer.cs">
+      <DependentUpon>ContactMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content.Master.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.Master.designer.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ApplicationDAL.cs" />
+    <Compile Include="DAL\CaseDAL.cs" />
+    <Compile Include="DAL\CollectionDAL.cs" />
+    <Compile Include="DAL\CustomerDAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\DBCommand.cs" />
+    <Compile Include="DAL\EntityCreator.cs" />
+    <Compile Include="DAL\EntityReader.cs" />
+    <Compile Include="DAL\EntityChecker.cs" />
+    <Compile Include="DAL\EntityUpdater.cs" />
+    <Compile Include="DAL\StatusDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.Master.cs">
+      <DependentUpon>Edit.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit.Master.designer.cs">
+      <DependentUpon>Edit.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EntityList.aspx.cs">
+      <DependentUpon>EntityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntityList.aspx.designer.cs">
+      <DependentUpon>EntityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Application.cs" />
+    <Compile Include="Entity\AppEnum.cs" />
+    <Compile Include="Entity\AttributeDefinitionFactory.cs" />
+    <Compile Include="Entity\Case.cs" />
+    <Compile Include="Entity\Collection.cs" />
+    <Compile Include="Entity\IAttributeDefinition.cs" />
+    <Compile Include="Entity\IBaseObject.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\Identifier.cs" />
+    <Compile Include="Entity\IObjectDefinition.cs" />
+    <Compile Include="Entity\JobStatus.cs" />
+    <Compile Include="Entity\Status.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Entity\UserRole.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="List.Master.cs">
+      <DependentUpon>List.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="List.Master.designer.cs">
+      <DependentUpon>List.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ApplicationManager.cs" />
+    <Compile Include="Manager\CaseManager.cs" />
+    <Compile Include="Manager\CollectionManager.cs" />
+    <Compile Include="Manager\CustomerManager.cs" />
+    <Compile Include="Manager\IManager.cs" />
+    <Compile Include="Manager\StatusManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="PageBase\BaseEditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageBase\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageBase\BaseListPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AjaxArguments.cs" />
+    <Compile Include="Utility\Dialog.cs" />
+    <Compile Include="Utility\MessageBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\RadSpell\de-DE.tdf" />
+    <None Include="App_Data\RadSpell\en-US.tdf" />
+    <None Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Content Include="App_Themes\TJVISA\TJVISA.skin" />
+    <Content Include="App_Data\TJVISA.accdb">
+    </Content>
+    <Content Include="EntityList.aspx" />
+    <Content Include="images\home.png" />
+    <Content Include="List.Master" />
+    <Content Include="ApplicationModel.aspx" />
+    <Content Include="ContactMe.aspx" />
+    <Content Include="Content.Master" />
+    <Content Include="Edit.Master" />
+    <Content Include="ApplicationDetails.aspx" />
+    <Content Include="App_Data\RadCaptcha\0.wav" />
+    <Content Include="App_Data\RadCaptcha\1.wav" />
+    <Content Include="App_Data\RadCaptcha\2.wav" />
+    <Content Include="App_Data\RadCaptcha\3.wav" />
+    <Content Include="App_Data\RadCaptcha\4.wav" />
+    <Content Include="App_Data\RadCaptcha\5.wav" />
+    <Content Include="App_Data\RadCaptcha\6.wav" />
+    <Content Include="App_Data\RadCaptcha\7.wav" />
+    <Content Include="App_Data\RadCaptcha\8.wav" />
+    <Content Include="App_Data\RadCaptcha\9.wav" />
+    <Content Include="App_Data\RadCaptcha\A.wav" />
+    <Content Include="App_Data\RadCaptcha\B.wav" />
+    <Content Include="App_Data\RadCaptcha\C.wav" />
+    <Content Include="App_Data\RadCaptcha\D.wav" />
+    <Content Include="App_Data\RadCaptcha\E.wav" />
+    <Content Include="App_Data\RadCaptcha\F.wav" />
+    <Content Include="App_Data\RadCaptcha\G.wav" />
+    <Content Include="App_Data\RadCaptcha\H.wav" />
+    <Content Include="App_Data\RadCaptcha\I.wav" />
+    <Content Include="App_Data\RadCaptcha\J.wav" />
+    <Content Include="App_Data\RadCaptcha\K.wav" />
+    <Content Include="App_Data\RadCaptcha\L.wav" />
+    <Content Include="App_Data\RadCaptcha\M.wav" />
+    <Content Include="App_Data\RadCaptcha\N.wav" />
+    <Content Include="App_Data\RadCaptcha\O.wav" />
+    <Content Include="App_Data\RadCaptcha\P.wav" />
+    <Content Include="App_Data\RadCaptcha\Q.wav" />
+    <Content Include="App_Data\RadCaptcha\R.wav" />
+    <Content Include="App_Data\RadCaptcha\S.wav" />
+    <Content Include="App_Data\RadCaptcha\T.wav" />
+    <Content Include="App_Data\RadCaptcha\U.wav" />
+    <Content Include="App_Data\RadCaptcha\V.wav" />
+    <Content Include="App_Data\RadCaptcha\W.wav" />
+    <Content Include="App_Data\RadCaptcha\X.wav" />
+    <Content Include="App_Data\RadCaptcha\Y.wav" />
+    <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="CaseDetails.aspx" />
+    <Content Include="CollectionDetails.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\img02.jpg" />
+    <Content Include="images\img03.jpg" />
+    <Content Include="UserDetails.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7377</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

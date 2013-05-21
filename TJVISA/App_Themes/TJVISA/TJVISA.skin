@@ -1,0 +1,35 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<telerik:RadComboBox runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="200px"/>
+<telerik:RadComboBoxItem runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadTextBox runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="200px"/>
+<telerik:RadButton runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="100px"/>
+<telerik:RadPane runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadWindow runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadWindowManager runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadCalendar runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="200px"/>
+<telerik:RadDatePicker runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="230px"/>
+<telerik:RadDateTimePicker runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="230px"/>
+<telerik:RadDateInput runat="server" Font-Names="Microsoft YaHei" Font-Size="14px" Width="200px"/>
+<telerik:RadEditor runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadNumericTextBox runat="server"  Font-Names="Microsoft YaHei" Font-Size="14px" Width="200px"/>
+<telerik:RadMenu runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadMenuItem runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadPanelBar runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadPanelItem runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:RadGrid runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
+<telerik:GridTableView runat="server" Font-Names="Microsoft YaHei" Font-Size="14px"/>
